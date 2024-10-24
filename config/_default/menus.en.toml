@@ -1,0 +1,39 @@
+[[main]]
+  name = "About Us"
+  pageRef = "about_us"
+  weight = 1
+
+[[main]]
+  name = "Definitions"
+  pageRef = "definitions"
+  weight = 3
+
+[[main]]
+  name = "Docs & Tools"
+  pageRef = "docs"
+  weight = 5
+
+[[main]]
+  name = "Blog"
+  pageRef = "blog"
+  weight = 10
+
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/OpenSyndrome/website/"
+  weight = 30
+  [main.params]
+    icon = "github"
+    showName = false
+    target = "_blank"
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
+    icon = "search"
+
+[[footer]]
+  name = "Privacy"
+  pageRef = "privacy"

@@ -1,0 +1,9 @@
+baseURL = 'https://opensyndrome.org/'
+languageCode = 'en-us'
+title = 'Open Syndrome Initiative'
+
+[pagination]
+  pagerSize = 15
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
