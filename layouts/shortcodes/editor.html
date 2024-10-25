@@ -1,0 +1,138 @@
+<style>
+    .editor-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+    .editor-textarea {
+        width: 100%;
+        min-height: 100px;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: inherit;
+        resize: vertical;
+    }
+    .editor-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.2s;
+    }
+    .editor-button:hover {
+        background-color: #0056b3;
+    }
+    .editor-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    .editor-response {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        display: none;
+        white-space: pre-wrap;
+    }
+    .editor-error {
+        color: #dc3545;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #ffe6e6;
+        display: none;
+    }
+    .editor-loading {
+        display: none;
+        margin-top: 10px;
+        color: #666;
+        text-align: center;
+    }
+    .editor-controls {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="editor-container">
+    <textarea 
+        id="editorInput" 
+        class="editor-textarea" 
+        placeholder="Enter your text here..."
+    ></textarea>
+    <div class="editor-controls">
+        <button 
+            onclick="sendToOpenAI()" 
+            id="editorSubmit" 
+            class="editor-button"
+        >
+            Generate with AI
+        </button>
+        <button 
+            onclick="clearEditor()" 
+            id="editorClear" 
+            class="editor-button"
+            style="background-color: #6c757d;"
+        >
+            Clear
+        </button>
+    </div>
+    <div id="editorLoading" class="editor-loading">
+        Processing your request...
+    </div>
+    <div id="editorResponse" class="editor-response"></div>
+    <div id="editorError" class="editor-error"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+<script>
+    async function sendToOpenAI() {
+        const userInput = document.getElementById('editorInput').value;
+        const submitBtn = document.getElementById('editorSubmit');
+        const loading = document.getElementById('editorLoading');
+        const responseDiv = document.getElementById('editorResponse');
+        const errorDiv = document.getElementById('editorError');
+
+        if (!userInput.trim()) {
+            errorDiv.textContent = 'Please enter some text';
+            errorDiv.style.display = 'block';
+            return;
+        }
+
+        submitBtn.disabled = true;
+        loading.style.display = 'block';
+        responseDiv.style.display = 'none';
+        errorDiv.style.display = 'none';
+
+        try {
+            const response = await axios.post('/api/openai', {
+                prompt: userInput
+            });
+
+            responseDiv.textContent = response.data.response;
+            responseDiv.style.display = 'block';
+            responseDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } catch (error) {
+            errorDiv.textContent = 'Error: ' + 
+                (error.response?.data?.error || 'Something went wrong. Please try again.');
+            errorDiv.style.display = 'block';
+        } finally {
+            submitBtn.disabled = false;
+            loading.style.display = 'none';
+        }
+    }
+
+    function clearEditor() {
+        document.getElementById('editorInput').value = '';
+        document.getElementById('editorResponse').style.display = 'none';
+        document.getElementById('editorError').style.display = 'none';
+    }
+</script>

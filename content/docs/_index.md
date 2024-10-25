@@ -1,5 +1,5 @@
 ---
-title: "Diagrams and Flowcharts"
+title: "Docs & Tools"
 date: 2019-03-06
 description: "Guide to Mermaid usage in Congo"
 summary: "It's easy to add diagrams and flowcharts to articles using Mermaid."
