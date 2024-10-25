@@ -1,0 +1,16 @@
+{{ range .Site.Data.ecdc_syndrome_definitions }}
+    {{ $definition := . }}
+
+    {{ $content := dict
+        "mediaType" "text/markdown"
+        "value" .summary
+    }}
+    {{ $page := dict
+        "content" $content
+        "kind" "page"
+        "path" (printf "%s.%s" (urls.Anchorize $definition.title) .MediaType.SubType)
+        "title" $definition.title
+    }}
+    {{ $.AddPage $page }}
+
+{{ end }}

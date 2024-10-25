@@ -1,0 +1,199 @@
+[
+    {
+        "title": "Anthrax Case Definition",
+        "description": "Clinical criteria for Anthrax diagnosis",
+        "scope": "specific",
+        "version": "1.0.0",
+        "open_syndrome_version": 1.0,
+        "clinical_criterias": [
+            {
+                "type": "criteria",
+                "logical_operator": "AT_LEAST",
+                "logical_operator_arguments": ["1"],
+                "values": [
+                    {
+                        "type": "criteria",
+                        "logical_operator": "AT_LEAST",
+                        "logical_operator_arguments": ["2"],
+                        "values": [
+                            {
+                                "type": "symptom",
+                                "name": "papular_vesicular_lesion"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "black_eschar_with_edema"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "criteria",
+                        "logical_operator": "AND",
+                        "values": [
+                            {
+                                "type": "symptom",
+                                "name": "fever"
+                            },
+                            {
+                                "type": "criteria",
+                                "logical_operator": "AT_LEAST",
+                                "logical_operator_arguments": ["1"],
+                                "values": [
+                                    {
+                                        "type": "symptom",
+                                        "name": "severe_abdominal_pain"
+                                    },
+                                    {
+                                        "type": "symptom",
+                                        "name": "diarrhea"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "criteria",
+                        "logical_operator": "AND",
+                        "values": [
+                            {
+                                "type": "symptom",
+                                "name": "fever"
+                            },
+                            {
+                                "type": "criteria",
+                                "logical_operator": "AT_LEAST",
+                                "logical_operator_arguments": ["1"],
+                                "values": [
+                                    {
+                                        "type": "symptom",
+                                        "name": "acute_respiratory_distress"
+                                    },
+                                    {
+                                        "type": "symptom",
+                                        "name": "mediastinal_widening"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Botulism Case Definition",
+        "description": "Clinical criteria for Botulism diagnosis",
+        "scope": "specific",
+        "version": "1.0.0",
+        "open_syndrome_version": 1.0,
+        "clinical_criterias": [
+            {
+                "type": "criteria",
+                "logical_operator": "AT_LEAST",
+                "logical_operator_arguments": ["1"],
+                "values": [
+                    {
+                        "type": "criteria",
+                        "logical_operator": "AT_LEAST",
+                        "logical_operator_arguments": ["2"],
+                        "values": [
+                            {
+                                "type": "symptom",
+                                "name": "bilateral_cranial_nerve_impairment"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "peripheral_symmetric_paralysis"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "criteria",
+                        "logical_operator": "AT_LEAST",
+                        "logical_operator_arguments": ["1"],
+                        "values": [
+                            {
+                                "type": "symptom",
+                                "name": "constipation"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "lethargy"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "feeding_difficulty"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "ptosis"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "dysphagia"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "general_muscle_weakness"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Brucellosis Case Definition",
+        "description": "Clinical criteria for Brucellosis diagnosis",
+        "scope": "specific",
+        "version": "1.0.0",
+        "open_syndrome_version": 1.0,
+        "clinical_criterias": [
+            {
+                "type": "criteria",
+                "logical_operator": "AND",
+                "values": [
+                    {
+                        "type": "symptom",
+                        "name": "fever"
+                    },
+                    {
+                        "type": "criteria",
+                        "logical_operator": "AT_LEAST",
+                        "logical_operator_arguments": ["1"],
+                        "values": [
+                            {
+                                "type": "symptom",
+                                "name": "sweating"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "chills"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "arthralgia"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "weakness"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "depression"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "headache"
+                            },
+                            {
+                                "type": "symptom",
+                                "name": "anorexia"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
