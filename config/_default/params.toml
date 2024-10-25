@@ -11,6 +11,7 @@ enableImageLazyLoading = true
 enableImageWebp = true
 enableQuicklink = true
 
+mainSections = ['definitions']
 # robots = ""
 fingerprintAlgorithm = "sha256"
 
@@ -30,7 +31,6 @@ fingerprintAlgorithm = "sha256"
   layout = "custom" # valid options: page, profile, custom
   showRecent = true
   recentLimit = 5
-  mainSections = ['definitions']
 
 [article]
   showDate = true
@@ -44,9 +44,9 @@ fingerprintAlgorithm = "sha256"
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
-  showReadingTime = true
+  showReadingTime = false
   showTableOfContents = true
-  showTaxonomies = false
+  showTaxonomies = true
   showWordCount = false
   showComments = false
   sharingLinks = ["x-twitter", "mastodon", "linkedin", "email", "telegram", "weibo", "xing"]
