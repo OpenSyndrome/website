@@ -1,16 +1,37 @@
-{{ range .Site.Data.ecdc_syndrome_definitions }}
-    {{ $definition := . }}
+{{ with resources.Get "definitions.md" }}
+  {{ $definitionTemplate := .Content }}
+  {{ range $.Site.Data.ecdc_syndrome_definitions }}
+
+    {{ $publishedAt := dict }}
+    {{ if .published_at }}
+      {{ $publishedAt := dict "date" (time.AsTime .published_at) }}
+    {{ end }}
+    {{ $dates := dict "date" now.UTC }}
+
+    {{ $processedContent := replace $definitionTemplate "OPEN_SYNDROME_TITLE" .title }}
+    {{ if .authors }}
+      {{ $processedContent = replace $processedContent "OPEN_SYNDROME_AUTHORS" (delimit .authors ", ") }}
+    {{ else }}
+      {{ $processedContent = replace $processedContent " - OPEN_SYNDROME_AUTHORS" "" }}
+    {{ end }}
+    {{ $processedContent = replace $processedContent "OPEN_SYNDROME_ORGANIZATION" .organization }}
+    {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DESCRIPTION" .description }}
+    {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DEFINTION" ( . | jsonify (dict "prefix" " " "indent" "  ")) }}
 
     {{ $content := dict
         "mediaType" "text/markdown"
-        "value" .summary
+        "value" $processedContent
     }}
     {{ $page := dict
         "content" $content
         "kind" "page"
-        "path" (printf "%s.%s" (urls.Anchorize $definition.title) .MediaType.SubType)
-        "title" $definition.title
+        "path" .title
+        "title" .title
+        "dates" $dates
+        "publishDate" .publishedAt
+        "draft" false
     }}
     {{ $.AddPage $page }}
 
+  {{ end }}
 {{ end }}

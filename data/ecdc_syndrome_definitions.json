@@ -195,5 +195,104 @@
                 ]
             }
         ]
-    }
+    },
+    {
+        "title": "Definição de Caso Suspeito de Sarampo",
+        "description": "Critérios clínicos para casos suspeitos de sarampo no Brasil",
+        "scope": "specific",
+        "version": "1.0.0",
+        "open_syndrome_version": 1.0,
+        "publish_in": "https://www.gov.br/saude/pt-br",
+        "published_at": "2024-10-08T09:09:56.930700Z",
+        "location": "Brasil",
+        "language": "pt-br",
+        "organization": "Ministério da Saude do Brasil",
+        "authors": [],
+        "clinical_criterias": [
+          {
+            "type": "criteria",
+            "logical_operator": "OR",
+            "values": [
+              {
+                "type": "criteria",
+                "logical_operator": "AND",
+                "values": [
+                  {
+                    "type": "syndrome",
+                    "name": "febre",
+                    "code": {
+                      "system": "SNOMED CT",
+                      "code": "386661006",
+                      "display": "Febre"
+                    }
+                  },
+                  {
+                    "type": "symptom",
+                    "name": "exantema maculopapular morbiliforme de direção cefalocaudal",
+                    "code": {
+                      "system": "SNOMED CT",
+                      "code": "271807003",
+                      "display": "Erupção cutânea"
+                    }
+                  },
+                  {
+                    "type": "criteria",
+                    "logical_operator": "AT_LEAST",
+                    "logical_operator_arguments": [1],
+                    "values": [
+                      {
+                        "type": "symptom",
+                        "name": "tosse",
+                        "code": {
+                          "system": "SNOMED CT",
+                          "code": "49727002",
+                          "display": "Tosse"
+                        }
+                      },
+                      {
+                        "type": "symptom",
+                        "name": "coriza",
+                        "code": {
+                          "system": "SNOMED CT",
+                          "code": "64531003",
+                          "display": "Coriza"
+                        }
+                      },
+                      {
+                        "type": "symptom",
+                        "name": "conjuntivite",
+                        "code": {
+                          "system": "SNOMED CT",
+                          "code": "9826008",
+                          "display": "Conjuntivite"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "criteria",
+                "logical_operator": "OR",
+                "values": [
+                  {
+                    "type": "epidemiological_link",
+                    "name": "histórico de viagem",
+                    "description": "História de viagem para locais com circulação do vírus do sarampo, nos últimos 30 dias"
+                  },
+                  {
+                    "type": "epidemiological_link",
+                    "name": "histórico de contato",
+                    "description": "Contato, nos últimos 30 dias, com alguém que viajou para local com circulação viral"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "exclusion_criteria": [],
+        "notes": [
+          "Independentemente da idade e situação vacinal"
+        ]
+    }    
 ]
