@@ -5,6 +5,8 @@
         "scope": "specific",
         "version": "1.0.0",
         "open_syndrome_version": 1.0,
+        "organization": "ECDC",
+        "authors": ["John Snow"],
         "clinical_criterias": [
             {
                 "type": "criteria",
@@ -86,6 +88,8 @@
         "scope": "specific",
         "version": "1.0.0",
         "open_syndrome_version": 1.0,
+        "organization": "European Centre for Disease Prevention and Control",
+        "authors": ["John Snow", "Mary S."],
         "clinical_criterias": [
             {
                 "type": "criteria",
@@ -148,6 +152,8 @@
         "scope": "specific",
         "version": "1.0.0",
         "open_syndrome_version": 1.0,
+        "organization": "European Centre for Disease Prevention and Control",
+        "authors": ["John Snow", "Mary S."],
         "clinical_criterias": [
             {
                 "type": "criteria",
@@ -207,7 +213,7 @@
         "location": "Brasil",
         "language": "pt-br",
         "organization": "Ministério da Saude do Brasil",
-        "authors": [],
+        "authors": ["Tonino Ferreira"],
         "clinical_criterias": [
           {
             "type": "criteria",
