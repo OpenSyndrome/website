@@ -1,6 +1,7 @@
 ---
 title: About Us
 date: 2024-10-24
+showDate: false
 ---
 
 # The Open Syndrome Initiative
