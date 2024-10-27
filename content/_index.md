@@ -7,7 +7,7 @@ Your database of open syndrome definitions
 {{< /lead >}}
 
 Transform clinical case definitions into machine-readable formats with Open Syndrome.
-Our interactive [editor]({{< ref "editor" >}}) makes it easy to convert text-based definitions into standardized `JSON` format, ready for modern surveillance systems.
+Our interactive [editor]({{< ref "our_tools" >}}) makes it easy to convert text-based definitions into standardized `JSON` format, ready for modern surveillance systems.
 
 Explore our comprehensive [documentation]({{< ref "docs" >}}) to learn implementation best practices, or visit our [blog]({{< ref "blog" >}}) to stay updated on the latest case definitions and community insights.
 
