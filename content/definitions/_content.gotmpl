@@ -1,6 +1,6 @@
 {{ with resources.Get "definitions.md" }}
   {{ $definitionTemplate := .Content }}
-  {{ range $.Site.Data.ecdc_syndrome_definitions }}
+  {{ range $.Site.Data.definitions }}
 
     {{ $publishedAt := dict }}
     {{ if .published_at }}
