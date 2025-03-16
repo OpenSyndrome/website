@@ -1,4 +1,4 @@
-# Open Syndrome Iniatiative website
+# Open Syndrome Initiative website
 
 In this repository only the code related to the website.
 For definitions and guidelines access our organization profile.

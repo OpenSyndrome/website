@@ -35,7 +35,7 @@ We work closely with:
 
 ## Our Format
 
-The Open Syndrome format (v1.0) provides:
+The Open Syndrome Definition (v1.0) provides:
 
 * JSON-based structure for case definitions
 * Logical operators for combining clinical criteria
