@@ -24,7 +24,7 @@ fingerprintAlgorithm = "sha256"
 [footer]
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = true
+  showAppearanceSwitcher = false
   showScrollToTop = true
 
 [homepage]
@@ -49,7 +49,7 @@ fingerprintAlgorithm = "sha256"
   showTaxonomies = true
   showWordCount = false
   showComments = false
-  sharingLinks = ["x-twitter", "mastodon", "linkedin", "email", "telegram", "weibo", "xing"]
+  sharingLinks = ["bluesky", "mastodon", "linkedin", "email", "telegram", "weibo", "xing"]
 
 [list]
   showBreadcrumbs = true
