@@ -12,5 +12,13 @@ Then [Hugo](https://gohugo.io/). Once you have both run:
 hugo server
 ```
 
+### Theme
+
 This website uses [Congo](https://jpanther.github.io/congo/docs/getting-started/)
 theme. Please refer to its documentation when making changes to the frontend.
+
+How to update the theme:
+
+```bash
+hugo mod get -u
+```
