@@ -19,7 +19,7 @@ Mauris nibh ex, eleifend vitae semper sed, tincidunt sit amet erat. Cras lacinia
 The definition is available in JSON format following the Open Syndrome v1.0 specification. Here's a simplified example:
 
 ```json
-OPEN_SYNDROME_DEFINTION
+OPEN_SYNDROME_DEFINITION
 ```
 
 ## Using the Definition

@@ -16,7 +16,7 @@
     {{ end }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_ORGANIZATION" .organization }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DESCRIPTION" .description }}
-    {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DEFINTION" ( . | jsonify (dict "prefix" " " "indent" "  ")) }}
+    {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DEFINITION" ( . | jsonify (dict "prefix" " " "indent" "  ")) }}
 
     {{ $content := dict
         "mediaType" "text/markdown"
