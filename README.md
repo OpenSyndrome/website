@@ -6,7 +6,7 @@ For definitions and guidelines access our organization profile.
 ## Development
 
 To run this website locally, you will need Go installed.
-Then [Hugo](https://gohugo.io/). Once you have both run:
+Then [Hugo](https://gohugo.io/) **version 0.145.0 extended**. Once you have both run:
 
 ```
 hugo server
