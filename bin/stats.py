@@ -1,15 +1,13 @@
 """Script to generate statistics from the definitions.json."""
+import itertools
 from pathlib import Path
 from collections import Counter
 import json
+
+import networkx as nx
 import plotly.express as px
 import pycountry
 import polars as pl
-
-
-# knowledge graph of definitions - normalize terms and locations
-jsons_dir = Path("data/definitions.json")
-sample_data = json.loads(jsons_dir.read_text())
 
 
 def count_attribute(data, attribute):
@@ -86,24 +84,61 @@ def generate_choropleth(location_counts):
     return fig
 
 
-all_instructions_counts = []
-all_types = []
-for data in sample_data:
-    _all_types = process_criteria(data, "inclusion_criteria", extract_types)
-    all_types.extend(_all_types)
-    _all_types = process_criteria(data, "exclusion_criteria", extract_types)
-    all_types.extend(_all_types)
+def create_nodes_from_criteria(G, criteria, _nodes=None):
+    if not _nodes:
+        _nodes = []
+    for item in criteria:
+        if item["type"] == "criteria":
+            return create_nodes_from_criteria(G, item["values"], _nodes)
+        else:
+            node = item.get("name") or item.get("description")
+            _nodes.append(node)
+            G.add_node(node, **item)
+    return _nodes
 
 
-type_counts = Counter(all_types)
-print("Type Counts (chart format)")
-print(list(type_counts.keys()))
-print(list(type_counts.values()))
-print("Language:")
-print(count_attribute(sample_data, "language"))
-print("Location:")
-print(count_attribute(sample_data, "location"))
+def create_edges_from_criteria(G, definition_title, criteria):
+    nodes = create_nodes_from_criteria(G, criteria)
+    nodes.append(definition_title)
+    G.add_node(definition_title, type="definition")
+    connected_nodes = itertools.combinations(nodes, 2)
+    G.add_edges_from(connected_nodes)
+    return G
 
 
-location_counts = count_attribute(sample_data, "location")
-fig = generate_choropleth(location_counts)
+def generate_graph_of_criteria(definitions):
+    G = nx.DiGraph()
+    for definition in definitions:
+        title = definition["title"].replace("Open Syndrome", "").strip()
+        G = create_edges_from_criteria(G, title, definition.get("inclusion_criteria", []))
+        G = create_edges_from_criteria(G, title, definition.get("exclusion_criteria", []))
+    print(len(G.nodes()), len(G.edges()))
+    return G
+
+
+if __name__ == "__main__":
+    jsons_dir = Path("data/definitions.json")
+    definitions = json.loads(jsons_dir.read_text())
+
+    all_instructions_counts = []
+    all_types = []
+    for data in definitions:
+        _all_types = process_criteria(data, "inclusion_criteria", extract_types)
+        all_types.extend(_all_types)
+        _all_types = process_criteria(data, "exclusion_criteria", extract_types)
+        all_types.extend(_all_types)
+
+    type_counts = Counter(all_types)
+    print("Type Counts (chart format)")
+    print(list(type_counts.keys()))
+    print(list(type_counts.values()))
+    print("Language:")
+    print(count_attribute(definitions, "language"))
+    print("Location:")
+    print(count_attribute(definitions, "location"))
+
+    location_counts = count_attribute(definitions, "location")
+    generate_choropleth(location_counts)
+
+    G = generate_graph_of_criteria(definitions)
+    nx.write_gml(G, "criteria_graph.gml")

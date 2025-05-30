@@ -26,6 +26,9 @@ or visit our [blog]({{< ref "blog" >}}) to stay updated on the latest case defin
 Whether you're a health worker defining new cases or a developer building surveillance tools, Open Syndrome
 provides the standards and tools you need for effective machine-readable representation.
 
-{{< figure src="images/undraw_medical_research_qg4d.svg" class="m-auto mt-6 max-w-prose" >}}
+<div id="force-graph" style="width: 100%; height: 600px; position: relative;"></div>
 
-If you like what you see, check out the project on [Github](https://github.com/OpenSyndrome/).
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="/js/force-graph.js"></script>
+
+Explore more of this graph [here](/graph).

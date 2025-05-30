@@ -48,3 +48,7 @@
 [[footer]]
   name = "How to cite"
   pageRef = "blog/how-to-cite"
+
+[[footer]]
+  name = "GitHub"
+  pageRef = "https://github.com/OpenSyndrome/"
