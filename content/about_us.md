@@ -24,15 +24,17 @@ See [how to get involved](/contributing/) and check our [tools](/contributing/ou
 Want to talk to us? Send an email to [contact@opensyndrome.org](mailto:contact@opensyndrome.org)
 {{< /alert >}}
 
-## Stats
+## Summary statistics
+
+_Updated at 30 of May 2025_
 
 {{< chart >}}
 type: 'bar',
 data: {
-  labels: ['Measles', 'Cholera', 'COVID-19', 'Fever', 'Rash'],
+  labels: ['criteria', 'symptom', 'diagnosis', 'diagnostic_test', 'demographic_criteria', 'professional_judgment', 'syndrome', 'epidemiological_history'],
   datasets: [{
-    label: '# of downloads',
-    data: [12, 19, 3, 5, 3],
+    label: '# inclusion and exclusion criteria types',
+    data: [109, 214, 33, 10, 4, 17, 1, 14],
   }]
 }
 {{< /chart >}}
