@@ -17,43 +17,14 @@ Our work is:
 * **Transparent**: All changes and updates are publicly documented
 * **Evolving**: Continuously improved based on community feedback
 
-We work closely with:
+We work closely with Public Health Organizations, Healthcare Institutions, Software Developers, Academic Researchers, and Surveillance Networks.
+See [how to get involved](/contributing/) and check our [tools](/contributing/our_tools) out.
 
-* Public Health Organizations
-* Healthcare Institutions
-* Software Developers
-* Academic Researchers
-* Surveillance Networks
+{{< alert "email" >}}
+Want to talk to us? Send an email to [contact@opensyndrome.org](mailto:contact@opensyndrome.org)
+{{< /alert >}}
 
-## What We Do
-
-* **Standardize**: We convert established case definitions from major health organizations into a structured, machine-readable format
-* **Modernize**: We enable automated surveillance systems with clear, programmatic criteria
-* **Connect**: We bridge the gap between clinical expertise and technical implementation
-* **Share**: We make all definitions freely available to the global health community
-
-## Our Format
-
-The Open Syndrome Definition (v1.0) provides:
-
-* JSON-based structure for case definitions
-* Logical operators for combining clinical criteria
-* Support for multiple languages
-* Version control for definition updates
-* Validation tools for implementation
-
-## Get Involved
-
-Join us in improving global disease surveillance:
-
-* Contribute to our GitHub repository
-* Submit new case definitions
-* Report implementation experiences
-* Suggest improvements
-
-*Contact us: [contact@opensyndrome.org](mailto:contact@opensyndrome.org)*
-
-# Stats
+## Stats
 
 {{< chart >}}
 type: 'bar',
