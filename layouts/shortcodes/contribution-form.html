@@ -1,0 +1,143 @@
+<div class="max-w-4xl mx-auto">
+<form id="contribution-form" class="space-y-8" action="#" method="POST">
+    <!-- Personal Information Section -->
+    <div class="p-6">
+        <h2 class="text-xl font-semibold mb-4">Personal Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label for="name" class="block text-sm font-medium">Name</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium">Email *</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+            </div>
+            <div class="md:col-span-2">
+                <label for="affiliation" class="block text-sm font-medium">Affiliation</label>
+                <input type="text" id="affiliation" name="affiliation" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Definition Section -->
+    <div class="p-6">
+        <h2 class="text-xl font-semibold mb-4">Case Definition Details</h2>
+        <div class="space-y-4">
+            <div>
+                <label for="title" class="block text-sm font-medium">Title *</label>
+                <input type="text" id="title" name="title" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+            </div>
+
+            <div>
+                <label for="text_definition" class="block text-sm font-medium">Text Definition *</label>
+                <textarea id="text_definition" name="text_definition" rows="6" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="location" class="block text-sm font-medium">Location</label>
+                    <input type="text" id="location" name="location" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                </div>
+
+                <div>
+                    <label for="publication_website" class="block text-sm font-medium">Current Publication Website</label>
+                    <input type="url" id="publication_website" name="publication_website" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                </div>
+
+                <div>
+                    <label for="publication_date" class="block text-sm font-medium">Publication Date (ISO format)</label>
+                    <input type="date" id="publication_date" name="publication_date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                </div>
+
+                <div>
+                    <label for="authors" class="block text-sm font-medium">Authors (comma-separated)</label>
+                    <input type="text" id="authors" name="authors" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                </div>
+
+                <div>
+                    <label for="category" class="block text-sm font-medium">Category</label>
+                    <select id="category" name="category" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                        <option value="suspected">Suspected</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="discarded">Discarded</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="language" class="block text-sm font-medium">Language</label>
+                    <input type="text" id="language" name="language" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                </div>
+
+                <div>
+                    <label for="organization" class="block text-sm font-medium">Organization</label>
+                    <input type="text" id="organization" name="organization" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                </div>
+
+                <div>
+                    <label for="scope" class="block text-sm font-medium">Scope</label>
+                    <select id="scope" name="scope" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                        <option value="broad">Broad</option>
+                        <option value="specific">Specific</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="status" class="block text-sm font-medium">Status</label>
+                    <select id="status" name="status" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                        <option value="invalid">Invalid</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="references" class="block text-sm font-medium">References (links to scientific publications)</label>
+                <textarea id="references" name="references" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"></textarea>
+            </div>
+
+            <div>
+                <label for="observations" class="block text-sm font-medium">Observations</label>
+                <textarea id="observations" name="observations" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div class="p-6">
+        <div class="space-y-4">
+            <div class="flex items-start">
+                <div class="flex items-center h-5">
+                    <input id="pr_consent" name="pr_consent" type="checkbox" required class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                </div>
+                <div class="ml-3 text-sm">
+                    <label for="pr_consent" class="font-medium">I understand that a pull request will be opened in the Open Syndrome repository on my behalf *</label>
+                </div>
+            </div>
+
+            <div class="flex items-start">
+                <div class="flex items-center h-5">
+                    <input id="email_consent" name="email_consent" type="checkbox" required class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                </div>
+                <div class="ml-3 text-sm">
+                    <label for="email_consent" class="font-medium">I agree to be contacted via the provided email address, and understand this will be the only means of communication *</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-end">
+        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+            Submit Contribution
+        </button>
+    </div>
+</form>
+</div>
+
+<script>
+document.getElementById('contribution-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your form submission logic here
+    alert('Thank you for your contribution! We will review it and get back to you soon.');
+});
+</script> 

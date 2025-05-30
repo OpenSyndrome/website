@@ -9,8 +9,8 @@
   weight = 3
 
 [[main]]
-  name = "Docs & Tools"
-  pageRef = "docs"
+  name = "Contributing"
+  pageRef = "contributing"
   weight = 5
 
 [[main]]

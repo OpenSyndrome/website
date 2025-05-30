@@ -1,13 +1,19 @@
 ---
-title: "Docs"
-date: 2024-10-25
+title: "Docs 📄"
+showDate: false
 description: "Open Syndrome documentation"
-tags: ["docs"]
 ---
 
-## Architecture
+## Workflow
 
-Our architecture is deliberately simple: a GitHub repository serves as the central hub where all syndrome definitions are stored and managed. When practitioners submit new definitions through Pull Requests, our system automatically validates the format. Only verified contributors can have their submissions reviewed by the community. Once approved, the definitions are automatically published to our website.
+Our workflow is deliberately simple: a GitHub repository serves as the central hub where all definitions are stored and managed. Any person can submit a new definition through the [submission contact form]()
+or directly via a [GitHub Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+People have also the option of verifying their affiliations and become verified contributors. For this, they need to provide a valid email address and an organization name through the [verification form]().
+The definitions from verified contributors receive the tag `verified`. All contributions are reviewed by the community and published on our website after approval and technical validation.
+
+When a definition is submitted though the form, we automatically create a GitHub Pull Request in our repository. This allows us to maintain a clear history of contributions and ensures that all definitions are version-controlled.
+Then, it will go through the same process as any other Pull Request, including validation and community review.
+
 Here's a visual representation of our workflow:
 
 {{< mermaid >}}

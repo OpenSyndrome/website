@@ -1,6 +1,6 @@
 ---
-title: "Tools"
-tags: ["tools"]
+title: "Tools 🛠️"
+showDate: false
 ---
 
 The Open Syndrome Definition Initiative provides a set of simple tools to make syndrome definitions
