@@ -44,3 +44,7 @@
 [[footer]]
   name = "Privacy"
   pageRef = "privacy"
+
+[[footer]]
+  name = "How to cite"
+  pageRef = "blog/how-to-cite"

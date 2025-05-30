@@ -1,6 +1,5 @@
 ---
 title: About Us
-date: 2024-10-24
 showDate: false
 ---
 
@@ -52,11 +51,9 @@ Join us in improving global disease surveillance:
 * Report implementation experiences
 * Suggest improvements
 
-*Contact us: [email@opensyndrome.org](mailto:email@opensyndrome.org)*
+*Contact us: [contact@opensyndrome.org](mailto:contact@opensyndrome.org)*
 
 # Stats
-
-## Leaderboard
 
 {{< chart >}}
 type: 'bar',
