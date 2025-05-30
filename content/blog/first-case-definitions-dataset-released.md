@@ -1,23 +1,16 @@
 ---
-title: "ECDC definitions released!"
-date: 2024-10-24
+title: "Case definitions released!"
+date: 2025-05-30
 ---
 
 _fake content for prototype purposes only_
 
-# ECDC Case Definitions Now Available in Open Syndrome Format
+# Case Definitions Now Available in Open Syndrome Format
 
-We are excited to announce a significant milestone in public health surveillance: the European Centre for Disease Prevention and Control (ECDC) case definitions are now available in the Open Syndrome format.
+We are excited to announce a significant milestone in public health surveillance: the first case definitions are now available in the Open Syndrome format.
 This development marks a crucial step forward in standardizing disease surveillance across Europe and beyond.
 
-## What This Means for Public Health
-
-The Open Syndrome format provides a structured, machine-readable approach to representing case definitions, making it easier for public health organizations to:
-
-* Implement automated surveillance systems
-* Share data across different platforms and jurisdictions
-* Maintain consistency in case reporting
-* Update definitions quickly as new evidence emerges
+## How to cite
 
 ## Technical Details
 
