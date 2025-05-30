@@ -1,0 +1,4 @@
+plotly==6.1.2
+text2term==4.4.1
+pycountry==24.6.1
+kaleido==0.2.1
