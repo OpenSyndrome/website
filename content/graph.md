@@ -1,9 +1,7 @@
 ---
-title: "Criteria Graph"
+title: "The Definitions Graph"
 showDate: false
 ---
-
-# The Definitions Graph
 
 This interactive visualization shows the relationships between different criteria in our definitions. Each node represents a criterion or definition, and the connections show how they are related.
 
