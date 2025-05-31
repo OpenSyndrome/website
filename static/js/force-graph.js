@@ -62,7 +62,7 @@ function createForceGraph(data) {
         const center = calculateCenterOfMass();
         const transform = d3.zoomIdentity
             .translate(width / 2, height / 2)
-            .scale(1)
+            .scale(0.6) // Set the zoom level to 0.6
             .translate(-center.x, -center.y);
         
         svg.transition()
@@ -232,11 +232,7 @@ function createForceGraph(data) {
         .style("border", "1px solid #ddd")
         .style("background", "white")
         .style("cursor", "pointer")
-        .on("click", () => {
-            svg.transition()
-                .duration(300)
-                .call(zoom.transform, d3.zoomIdentity.scale(0.6)); // Reset to initial zoom level
-        });
+        .on("click", centerGraph);
 
     // Export as SVG
     function exportSVG() {
