@@ -1,14 +1,29 @@
 // Force-directed graph component
 function createForceGraph(data) {
-    // Set up the SVG dimensions
-    const width = 800;
+    // Set up the SVG dimensions to be responsive
+    const container = d3.select("#force-graph");
+    const width = container.node().getBoundingClientRect().width;
     const height = 600;
 
+    // Add export button above the graph
+    container.append("button")
+        .text("Export as SVG")
+        .style("padding", "0 10px")
+        .style("height", "30px")
+        .style("border-radius", "15px")
+        .style("border", "1px solid #ddd")
+        .style("background", "white")
+        .style("cursor", "pointer")
+        .style("margin-bottom", "10px")
+        .style("float", "right")
+        .on("click", exportSVG);
+
     // Create SVG with transparent background
-    const svg = d3.select("#force-graph")
-        .append("svg")
-        .attr("width", width)
+    const svg = container.append("svg")
+        .attr("width", "100%")
         .attr("height", height)
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("preserveAspectRatio", "xMidYMid meet")
         .attr("style", "background: transparent");
 
     // Create a group for the graph that will be transformed
@@ -185,10 +200,10 @@ function createForceGraph(data) {
     }
 
     // Add zoom controls
-    const zoomControls = d3.select("#force-graph")
+    const zoomControls = container
         .append("div")
         .style("position", "absolute")
-        .style("top", "10px")
+        .style("top", "50px") // Moved down to account for the export button
         .style("left", "10px")
         .style("display", "flex")
         .style("gap", "5px");
@@ -262,21 +277,6 @@ function createForceGraph(data) {
         downloadLink.click();
         document.body.removeChild(downloadLink);
     }
-
-    // Add export button
-    d3.select("#force-graph")
-        .append("button")
-        .text("Export as SVG")
-        .style("position", "absolute")
-        .style("top", "10px")
-        .style("right", "10px")
-        .style("padding", "0 10px")
-        .style("height", "30px")
-        .style("border-radius", "15px")
-        .style("border", "1px solid #ddd")
-        .style("background", "white")
-        .style("cursor", "pointer")
-        .on("click", exportSVG);
 }
 
 // Parse GML format
