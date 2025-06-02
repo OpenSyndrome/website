@@ -111,7 +111,7 @@ function createForceGraph(data) {
         .data(data.nodes)
         .join("text")
         .text(d => d.label)
-        .attr("font-size", 10)
+        .attr("font-size", 16)
         .attr("font-family", "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif")
         .attr("dx", 12)
         .attr("dy", 4);
@@ -127,7 +127,8 @@ function createForceGraph(data) {
         .style("padding", "10px")
         .style("border-radius", "5px")
         .style("pointer-events", "none")
-        .style("font-family", "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif");
+        .style("font-family", "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif")
+        .style("font-size", "14px");
 
     node.on("mouseover", function(event, d) {
         tooltip.transition()
