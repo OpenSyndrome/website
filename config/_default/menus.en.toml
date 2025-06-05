@@ -1,22 +1,17 @@
 [[main]]
-  name = "About Us"
-  pageRef = "about_us"
-  weight = 1
+  name = "About"
+  pageRef = "about"
+  weight = 3
 
 [[main]]
   name = "Definitions"
   pageRef = "definitions"
-  weight = 3
+  weight = 1
 
 [[main]]
-  name = "Contributing"
-  pageRef = "contributing"
-  weight = 5
-
-[[main]]
-  name = "Blog"
-  pageRef = "blog"
-  weight = 10
+  name = "How"
+  pageRef = "how"
+  weight = 2
 
 [[main]]
   name = "GitHub"
@@ -42,13 +37,17 @@
     icon = "search"
 
 [[footer]]
-  name = "Privacy"
-  pageRef = "privacy"
+  name = "Tags"
+  pageRef = "tags"
 
 [[footer]]
   name = "How to cite"
   pageRef = "blog/how-to-cite"
 
 [[footer]]
+  name = "Blog"
+  pageRef = "blog"
+
+[[footer]]
   name = "GitHub"
-  pageRef = "https://github.com/OpenSyndrome/"
+  url = "https://github.com/OpenSyndrome/"

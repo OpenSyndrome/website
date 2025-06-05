@@ -18,12 +18,6 @@ osi humanize # from machine to human-readable form (text)
 osi validate # pass your JSON file and see what is missing
 ```
 
-## Validator
-
-{{< badge >}}
-Coming up soon!
-{{< /badge >}}
-
 ## Other JSON tools
 
 * https://jsoncrack.com/editor

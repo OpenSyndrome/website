@@ -1,9 +1,7 @@
 ---
-title: About Us
+title: About the Open Syndrome Initiative
 showDate: false
 ---
-
-# The Open Syndrome Initiative
 
 ## Our Mission
 
@@ -18,7 +16,7 @@ Our work is:
 * **Evolving**: Continuously improved based on community feedback
 
 We work closely with Public Health Organizations, Healthcare Institutions, Software Developers, Academic Researchers, and Surveillance Networks.
-See [how to get involved](/contributing/) and check our [tools](/contributing/our_tools) out.
+See [how to get involved](/how/) and check our [tools](/how/our_tools) out.
 
 {{< alert "email" >}}
 Want to talk to us? Send an email to [contact@opensyndrome.org](mailto:contact@opensyndrome.org)
