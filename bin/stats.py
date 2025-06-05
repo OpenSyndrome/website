@@ -5,7 +5,7 @@ from collections import Counter
 import json
 
 import networkx as nx
-import plotly.express as px
+import plotly.graph_objects as go
 import pycountry
 import polars as pl
 
@@ -53,33 +53,30 @@ def generate_choropleth(location_counts):
                 })
         except:
             continue
-    
+
     df = pl.DataFrame(data)
-    fig = px.choropleth(
-        df,
-        locations='iso_alpha',
-        color='count',
-        hover_name='country',
-        color_continuous_scale='Plasma',
+    fig = go.Figure(data=go.Choropleth(
+        locations=df['iso_alpha'],
+        z=df['count'],
         locationmode='ISO-3',
-        color_discrete_sequence=px.colors.sequential.Plasma,
-        color_discrete_map={i: px.colors.sequential.Plasma[i-1] for i in range(1, max(df['count']) + 1)}
-    )
-    
+        colorscale='Emrld',
+        # colorbar_title="Count",
+    ))
+    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
     fig.update_layout(
         geo=dict(
+            showcountries=True,
             showframe=False,
-            showcoastlines=True,
-            projection_type='equirectangular'
+            showcoastlines=False,
+            projection_type='equirectangular',
+            lataxis_range=[-59, 90],
+            bgcolor='rgba(0,0,0,0)',
         ),
-        margin=dict(l=0, r=0, t=30, b=0),
-        coloraxis_colorbar=dict(
-            tickmode='array',
-            ticktext=[str(i) for i in range(1, max(df['count']) + 1)],
-            tickvals=list(range(1, max(df['count']) + 1))
-        )
+        margin=dict(l=0, r=0, t=30, b=30),
+        paper_bgcolor='rgba(0,0,0,0)',
     )
-    
+
+    fig.write_image("assets/images/world_map.png")
     fig.write_image("assets/images/world_map.svg")
     return fig
 
@@ -128,17 +125,17 @@ if __name__ == "__main__":
         _all_types = process_criteria(data, "exclusion_criteria", extract_types)
         all_types.extend(_all_types)
 
-    type_counts = Counter(all_types)
-    print("Type Counts (chart format)")
-    print(list(type_counts.keys()))
-    print(list(type_counts.values()))
-    print("Language:")
-    print(count_attribute(definitions, "language"))
-    print("Location:")
-    print(count_attribute(definitions, "location"))
+    # type_counts = Counter(all_types)
+    # print("Type Counts (chart format)")
+    # print(list(type_counts.keys()))
+    # print(list(type_counts.values()))
+    # print("Language:")
+    # print(count_attribute(definitions, "language"))
+    # print("Location:")
+    # print(count_attribute(definitions, "location"))
 
     location_counts = count_attribute(definitions, "location")
     generate_choropleth(location_counts)
 
-    G = generate_graph_of_criteria(definitions)
-    nx.write_gml(G, "criteria_graph.gml")
+    #G = generate_graph_of_criteria(definitions)
+    #nx.write_gml(G, "criteria_graph.gml")

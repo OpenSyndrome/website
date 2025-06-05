@@ -26,7 +26,7 @@ Want to talk to us? Send an email to [contact@opensyndrome.org](mailto:contact@o
 
 _Updated at 30 of May 2025_
 
-### Geographic Distribution of Definitions
+### Map of our of definitions
 
 ![World Map of Definitions](/images/world_map.svg)
 

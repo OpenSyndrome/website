@@ -23,12 +23,9 @@ and we will help you to convert it.
 Explore our comprehensive [documentation]({{< ref "how" >}}) to learn implementation best practices,
 or visit our [blog]({{< ref "blog" >}}) to stay updated on the latest case definitions and community insights.
 
+![World Map of Definitions](/images/world_map.svg)
+
 Whether you're a health worker defining new cases or a developer building surveillance tools, Open Syndrome
 provides the standards and tools you need for effective machine-readable representation.
 
-<div id="force-graph" style="width: 100%; height: 600px; position: relative;"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="/js/force-graph.js"></script>
-
-Explore more of this graph [here](/graph).
+Explore the graph of syndromes and its criteria [here](/graph).
