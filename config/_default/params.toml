@@ -17,8 +17,7 @@ fingerprintAlgorithm = "sha256"
 
 [header]
   layout = "basic" # valid options: basic, hamburger, hybrid, custom
-  # logo = "img/logo.jpg"
-  # logoDark = "img/dark-logo.jpg"
+  logo = "images/noun-connection-6570712-19BF7A128px.png"
   showTitle = true
 
 [footer]
