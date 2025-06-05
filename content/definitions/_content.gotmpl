@@ -12,16 +12,35 @@
     {{ if .authors }}
       {{ $processedContent = replace $processedContent "OPEN_SYNDROME_AUTHORS" (delimit .authors ", ") }}
     {{ else }}
-      {{ $processedContent = replace $processedContent " - OPEN_SYNDROME_AUTHORS" "" }}
+      {{ $processedContent = replace $processedContent "OPEN_SYNDROME_AUTHORS, " "" }}
     {{ end }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_ORGANIZATION" .organization }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DESCRIPTION" .description }}
+    {{ $processedContent = replace $processedContent "OPEN_SYNDROME_HUMAN_READABLE_DEFINITION" .human_readable_definition }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DEFINITION" ( . | jsonify (dict "prefix" " " "indent" "  ")) }}
 
     {{ $content := dict
         "mediaType" "text/markdown"
         "value" $processedContent
     }}
+
+    {{ $allTags := slice }}
+    {{ if .keywords }}
+      {{ range .keywords }}
+        {{ $allTags = $allTags | append . }}
+      {{ end }}
+    {{ end }}
+    {{ if .target_public_health_threats }}
+      {{ range .target_public_health_threats }}
+        {{ $allTags = $allTags | append . }}
+      {{ end }}
+    {{ end }}
+
+    {{ $params := dict }}
+    {{ if $allTags }}
+      {{ $params = merge $params (dict "tags" $allTags) }}
+    {{ end }}
+
     {{ $page := dict
         "content" $content
         "kind" "page"
@@ -30,6 +49,7 @@
         "dates" $dates
         "publishDate" .publishedAt
         "draft" false
+        "params" $params
     }}
     {{ $.AddPage $page }}
 
