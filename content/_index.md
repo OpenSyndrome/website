@@ -13,7 +13,7 @@ Contribute!
 </div>
 
 {{< badge >}}
-57 countries, 40 definitions, 1 standard
+35 countries, 40 definitions, 1 standard
 {{< /badge >}}
 
 Transform syndrome and case definitions into machine-readable formats with Open Syndrome.
