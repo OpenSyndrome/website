@@ -5,7 +5,9 @@ from collections import Counter
 import json
 
 import networkx as nx
+import numpy as np
 import plotly.graph_objects as go
+import plotly.express as px
 import pycountry
 import polars as pl
 
@@ -55,14 +57,21 @@ def generate_choropleth(location_counts):
             continue
 
     df = pl.DataFrame(data)
+    count = list(df["count"].unique())
+    color_scale = [
+        (r, c)
+        for r, c in zip(
+            np.repeat(np.linspace(0, 1, len(count) + 1), 2)[1:],
+            np.repeat(px.colors.sequential.Tealgrn, 2),
+        )
+    ]
+
     fig = go.Figure(data=go.Choropleth(
         locations=df['iso_alpha'],
         z=df['count'],
         locationmode='ISO-3',
-        colorscale='Emrld',
-        # colorbar_title="Count",
+        coloraxis="coloraxis",
     ))
-    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
     fig.update_layout(
         geo=dict(
             showcountries=True,
@@ -74,6 +83,17 @@ def generate_choropleth(location_counts):
         ),
         margin=dict(l=0, r=0, t=30, b=30),
         paper_bgcolor='rgba(0,0,0,0)',
+        coloraxis={
+            "colorscale": color_scale,
+            "colorbar": {
+                "tickvals": list(df["count"].unique()),
+                "title": {
+                    "text": "count"
+                },
+                "lenmode": "pixels",
+                "len": 100,
+            }
+        },
     )
 
     fig.write_image("assets/images/world_map.png")
