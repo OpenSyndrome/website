@@ -16,6 +16,7 @@ function createForceGraph(data) {
         .style("cursor", "pointer")
         .style("margin-bottom", "10px")
         .style("float", "right")
+        .style("color", "#333333")
         .on("click", exportSVG);
 
     // Create SVG with transparent background
@@ -114,7 +115,8 @@ function createForceGraph(data) {
         .attr("font-size", 16)
         .attr("font-family", "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif")
         .attr("dx", 12)
-        .attr("dy", 4);
+        .attr("dy", 4)
+        .attr("fill", "#666666");
 
     // Add tooltips
     const tooltip = d3.select("body")
@@ -218,6 +220,7 @@ function createForceGraph(data) {
         .style("border", "1px solid #ddd")
         .style("background", "white")
         .style("cursor", "pointer")
+        .style("color", "#333333")
         .on("click", () => {
             svg.transition()
                 .duration(300)
@@ -233,6 +236,7 @@ function createForceGraph(data) {
         .style("border", "1px solid #ddd")
         .style("background", "white")
         .style("cursor", "pointer")
+        .style("color", "#333333")
         .on("click", () => {
             svg.transition()
                 .duration(300)
@@ -248,6 +252,7 @@ function createForceGraph(data) {
         .style("border", "1px solid #ddd")
         .style("background", "white")
         .style("cursor", "pointer")
+        .style("color", "#333333")
         .on("click", centerGraph);
 
     // Export as SVG

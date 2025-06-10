@@ -1,6 +1,7 @@
 ---
 title: "The Definitions Graph"
 showDate: false
+layout: "simple"
 ---
 
 This interactive visualization shows the relationships between different criteria in our definitions. Each node represents a criterion or definition, and the connections show how they are related.
