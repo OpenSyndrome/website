@@ -1,17 +1,22 @@
 [[main]]
-  name = "About"
-  pageRef = "about"
-  weight = 3
-
-[[main]]
   name = "Definitions"
   pageRef = "definitions"
   weight = 1
 
 [[main]]
+  name = "Graph"
+  pageRef = "graph"
+  weight = 2
+
+[[main]]
   name = "How"
   pageRef = "how"
-  weight = 2
+  weight = 3
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 4
 
 [[main]]
   name = "GitHub"

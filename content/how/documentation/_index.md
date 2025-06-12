@@ -4,7 +4,7 @@ showDate: false
 description: "Open Syndrome Definition documentation"
 ---
 
-## Workflow
+## Contribution workflow
 
 Our workflow is deliberately simple: a GitHub repository serves as the central hub where all definitions are stored and managed. Any person can submit a new definition through the [submission contact form]()
 or directly via a [GitHub Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
