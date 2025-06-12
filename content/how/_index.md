@@ -1,5 +1,5 @@
 ---
-title: "Contributing"
+title: "How"
 date: 2024-10-25
 ---
 
@@ -9,5 +9,5 @@ Using open source as our foundation, we've created a simple yet powerful system 
 contribute their knowledge while making it accessible to researchers, organizations, and developers worldwide.
 
 {{< alert "edit" >}}
-Send your contribution via form [here](/contribute)
+Send your contribution via form [here](/contribute) or on our [GitHub repository](https://github.com/OpenSyndrome/definitions)
 {{< /alert >}}

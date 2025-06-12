@@ -1,7 +1,7 @@
 ---
-title: "Docs 📄"
+title: "Documentation 📄"
 showDate: false
-description: "Open Syndrome documentation"
+description: "Open Syndrome Definition documentation"
 ---
 
 ## Workflow

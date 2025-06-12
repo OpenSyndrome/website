@@ -2,7 +2,6 @@
 title: "Diarrhea Case Definition"
 description: "This is a demo of the Congo theme for Hugo."
 date: 2024-10-24
-tags: ["bla", "tag"]
 ---
 
 {{< badge >}}
