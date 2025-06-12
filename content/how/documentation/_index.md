@@ -4,6 +4,10 @@ showDate: false
 description: "Open Syndrome Definition documentation"
 ---
 
+## Schema
+
+Looking for the schema documentation? Go to [this page]({{< ref "schema_doc" >}}).
+
 ## Contribution workflow
 
 Our workflow is deliberately simple: a GitHub repository serves as the central hub where all definitions are stored and managed. Any person can submit a new definition through the [submission contact form]()
