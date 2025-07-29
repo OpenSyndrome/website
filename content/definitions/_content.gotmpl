@@ -16,6 +16,7 @@
     {{ end }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_ORGANIZATION" .organization }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DESCRIPTION" .description }}
+    {{ $processedContent = replace $processedContent "OPEN_SYNDROME_LOCATION" .location }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_HUMAN_READABLE_DEFINITION" .human_readable_definition }}
     {{ $processedContent = replace $processedContent "OPEN_SYNDROME_DEFINITION" ( . | jsonify (dict "prefix" " " "indent" "  ")) }}
 
