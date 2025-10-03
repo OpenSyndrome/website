@@ -1,5 +1,7 @@
 # Open Syndrome Initiative website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e1bd7ae8-1a2c-43b7-a4ae-a581e8b0b95d/deploy-status)](https://app.netlify.com/projects/opensyndrome/deploys)
+
 In this repository only the code related to the website.
 For definitions and guidelines access our organization profile.
 
