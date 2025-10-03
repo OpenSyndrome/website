@@ -1,14 +1,24 @@
 ---
-title: "Documentation 📄"
+title: "Getting started with the Open Syndrome Definition 📄"
 showDate: false
 description: "Open Syndrome Definition documentation"
 ---
 
-## Schema
+## Getting Started
 
+Whether you want to contribute new syndrome definitions or use existing ones, starting is simple.
+Contributors submit their definitions through [GitHub Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request),
+and users can access the definitions through our website in various formats - `JSON`, text, or through direct GitHub access.
+
+This initiative represents a step toward more open, standardized, and collaborative medical knowledge sharing.
+By bringing together clinical expertise and modern technology infrastructure, we're creating a valuable resource
+for the entire healthcare community.
+
+{{< alert "edit" >}}
 Looking for the schema documentation? Go to [this page]({{< ref "schema_doc" >}}).
+{{< /alert >}}
 
-## Contribution workflow
+## How does this initiative works?
 
 Our workflow is deliberately simple: a GitHub repository serves as the central hub where all definitions are stored and managed. Any person can submit a new definition through the [submission contact form]()
 or directly via a [GitHub Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
@@ -67,16 +77,7 @@ Our platform brings together four key groups: **Public Health Practitioners** wh
 the **Technical Community** that builds tools and models using this data, **Healthcare Organizations** that implement these definitions in
 practice, and the **Academic Community** that uses this knowledge for research and education.
 
-## The Power of Open Format
-
-By choosing an open format and Git-based workflow, we're making medical knowledge more accessible and standardized. This approach enables everything from machine learning research to clinical education. Practitioners can share their knowledge easily, researchers can develop new syndrome discovery models, and organizations can implement standardized definitions in their systems.
-
-## Getting Started
-
-Whether you want to contribute new syndrome definitions or use existing ones, starting is simple.
-Contributors submit their definitions through [GitHub Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request),
-and users can access the definitions through our website in various formats - `JSON`, text, or through direct GitHub access.
-
-This initiative represents a step toward more open, standardized, and collaborative medical knowledge sharing.
-By bringing together clinical expertise and modern technology infrastructure, we're creating a valuable resource
-for the entire healthcare community.
+{{< alert "chat" >}}
+Want to chat about our use cases or share your thoughts on the format?
+Feel free to start a new [discussion](https://github.com/orgs/OpenSyndrome/discussions).
+{{< /alert >}}

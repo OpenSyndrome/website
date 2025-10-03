@@ -15,6 +15,11 @@ Our work is:
 * **Transparent**: All changes and updates are publicly documented
 * **Evolving**: Continuously improved based on community feedback
 
+By choosing an open format and Git-based workflow, we're making medical knowledge more accessible and standardized.
+This approach enables everything from machine learning research to clinical education.
+Practitioners can share their knowledge easily, researchers can develop new syndrome discovery models, and organizations
+can implement standardized definitions in their systems.
+
 We work closely with Public Health Organizations, Healthcare Institutions, Software Developers, Academic Researchers, and Surveillance Networks.
 See [how to get involved](/how/) and check our [tools](/how/tools) out.
 
