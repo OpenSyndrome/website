@@ -1,6 +1,6 @@
 {{ with resources.Get "definitions.md" }}
   {{ $definitionTemplate := .Content }}
-  {{ range $.Site.Data.definitions }}
+  {{ range $.Site.Data.definitions_v1 }}
 
     {{ $publishedAt := dict }}
     {{ if .published_at }}

@@ -1,7 +1,18 @@
 #!/bin/bash
+set -e
 
-SEARCH_DIR="${1:-.}"
-OUTPUT_FILE="${2:-data/definitions.json}"
+rm -rf data/definitions
+mkdir -p data/definitions
+
+curl -L https://github.com/OpenSyndrome/definitions/archive/refs/heads/main.zip -o definitions.zip
+unzip definitions.zip
+mv definitions-main/definitions/v1 data/definitions
+rm -rf definitions.zip definitions-main
+
+echo "Definitions downloaded..."
+
+SEARCH_DIR="data/definitions/"
+OUTPUT_FILE="${2:-data/definitions_v1.json}"
 
 if ! command -v jq &> /dev/null; then
     echo "Error: jq is not installed."
