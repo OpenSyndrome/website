@@ -1,5 +1,5 @@
 ---
-title: "Contribute 📤"
+title: "Contributing 📤"
 description: "Submit your case definition to Open Syndrome"
 showDate: false
 ---
