@@ -1,16 +1,12 @@
 ---
-title: "Case definitions released!"
-date: 2025-05-30
+title: "Case definitions dataset released!"
+date: 2025-10-24
 ---
-
-_fake content for prototype purposes only_
 
 # Case Definitions Now Available in Open Syndrome Format
 
 We are excited to announce a significant milestone in public health surveillance: the first case definitions are now available in the Open Syndrome format.
-This development marks a crucial step forward in standardizing disease surveillance across Europe and beyond.
-
-## How to cite
+This development marks a crucial step forward in standardizing disease surveillance.
 
 ## Technical Details
 
@@ -19,7 +15,6 @@ The case definitions have been converted into JSON format following the Open Syn
 * Standardized clinical criteria
 * Clear logical operators for combining symptoms and signs
 * Version control for tracking updates
-* Multilingual support
 * Machine-readable thresholds and measurements
 
 ## Getting Started
@@ -37,7 +32,7 @@ This release is just the beginning. We are working on:
 
 ## Join the Community
 
-We invite public health professionals, developers, and researchers to contribute to this initiative. Visit our GitHub repository to learn more about implementation, suggest improvements, or report issues.
+We invite public health professionals, developers, and researchers to contribute to this initiative. Visit our GitHub repository to learn more about implementation, suggest improvements, or report issues. See how to cite us [here](https://opensyndrome.org/blog/how-to-cite/).
 
 Together, we're building a more standardized and efficient global disease surveillance system.
 
