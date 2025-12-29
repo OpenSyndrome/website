@@ -1,6 +1,7 @@
 baseURL = 'https://opensyndrome.org/'
 languageCode = 'en-us'
 title = 'Open Syndrome Initiative'
+copyright = 'Ana Paula Gomes Ferreira'
 
 [pagination]
   pagerSize = 15
