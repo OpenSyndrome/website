@@ -1,5 +1,7 @@
 // Force-directed graph component
 function createForceGraph(data) {
+    const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
     // Set up the SVG dimensions to be responsive
     const container = d3.select("#force-graph");
     const width = container.node().getBoundingClientRect().width;
@@ -124,8 +126,9 @@ function createForceGraph(data) {
         .attr("class", "tooltip")
         .style("opacity", 0)
         .style("position", "absolute")
-        .style("background-color", "white")
-        .style("border", "1px solid #ddd")
+        .style("background-color", darkMode ? "#2d2d2d" : "white")
+        .style("border", darkMode ? "1px solid #555" : "1px solid #ddd")
+        .style("color", darkMode ? "#e0e0e0" : "#333333")
         .style("padding", "10px")
         .style("border-radius", "5px")
         .style("pointer-events", "none")
