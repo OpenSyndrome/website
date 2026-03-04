@@ -1,5 +1,5 @@
 [build]
-  command = "bin/fetch_definitions.sh && hugo mod get -u && hugo --gc --minify -b $URL"
+  command = "bin/prepare_website.sh && hugo mod get -u && hugo --gc --minify -b $URL"
   publish = "public"
 
 [build.environment]
