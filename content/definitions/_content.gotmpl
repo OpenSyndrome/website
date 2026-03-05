@@ -2,11 +2,11 @@
   {{ $definitionTemplate := .Content }}
   {{ range $.Site.Data.definitions_v1 }}
 
-    {{ $publishedAt := dict }}
+    {{ $date := now.UTC }}
     {{ if .published_at }}
-      {{ $publishedAt := dict "date" (time.AsTime .published_at) }}
+      {{ $date = time.AsTime .published_at }}
     {{ end }}
-    {{ $dates := dict "date" now.UTC }}
+    {{ $dates := dict "date" $date "lastmod" now.UTC }}
 
     {{ $processedContent := replace $definitionTemplate "OPEN_SYNDROME_TITLE" .title }}
     {{ if .authors }}
@@ -48,7 +48,6 @@
         "path" .title
         "title" .title
         "dates" $dates
-        "publishDate" .publishedAt
         "draft" false
         "params" $params
     }}
