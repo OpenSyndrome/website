@@ -1,12 +1,14 @@
 [[main]]
   name = "Definitions"
   pageRef = "definitions"
-  weight = 1
+  weight = 2
 
 [[main]]
-  name = "Graph"
-  pageRef = "graph"
-  weight = 2
+  name = "Live"
+  pageRef = "live"
+  weight = 1
+  [main.params]
+    class = "menu-live-btn"
 
 [[main]]
   name = "How"

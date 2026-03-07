@@ -1,0 +1,15 @@
+/* "Live" nav button */
+header nav a[href="/live/"],
+header nav a[href="/live"] {
+  background-color: #19BF7A;
+  color: #fff !important;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+header nav a[href="/live/"]:hover,
+header nav a[href="/live"]:hover {
+  background-color: #13a368;
+}

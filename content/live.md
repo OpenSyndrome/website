@@ -1,8 +1,26 @@
 ---
-title: "The Definitions Graph"
+title: "Live"
 showDate: false
 layout: "simple"
 ---
+
+## Data Browser
+
+Explore the Open Syndrome definitions interactively in the live data browser.
+
+<a href="https://data-browser.fly.dev/" target="_blank" rel="noopener" style="display:inline-block; margin-bottom: 1rem; padding: 0.5rem 1.25rem; background:#19BF7A; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">Open Data Browser →</a>
+
+---
+
+## Dataset
+
+The full definitions dataset is available for download and programmatic access.
+
+- [Case Definitions dataset (PDF, TXT and JSON)](https://huggingface.co/datasets/opensyndrome/case-definitions)
+
+---
+
+## Definitions Graph
 
 This interactive visualization shows the relationships between different criteria in our definitions. Each node represents a criterion or definition, and the connections show how they are related.
 
@@ -26,4 +44,4 @@ Tips
 - **Click** the "Export as SVG" button to download the current view as an SVG file
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="/js/force-graph.js"></script> 
+<script src="/js/force-graph.js"></script>
