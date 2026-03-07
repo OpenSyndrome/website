@@ -16,3 +16,7 @@ data/
 !static/data/
 !static/schema.json
 !static/context.jsonld
+
+# charts related files
+.venv/
+*.pdf
