@@ -48,24 +48,45 @@ echo "Combined JSON files: $OUTPUT_FILE"
 
 # --- Schema ---
 
-SCHEMA_URL="https://raw.githubusercontent.com/OpenSyndrome/schema/refs/heads/main/schemas/latest.json"
-SCHEMA_OUT="static/schema.json"
+SCHEMA_BASE_URL="https://raw.githubusercontent.com/OpenSyndrome/schema/refs/heads/main/schemas"
+SCHEMA_VERSIONS=("v1")
 
 echo "Downloading schema..."
-if curl -sf "$SCHEMA_URL" -o "$SCHEMA_OUT"; then
-    echo "Schema saved to $SCHEMA_OUT"
+
+# latest.json → /schema.json
+if curl -sf "$SCHEMA_BASE_URL/latest.json" -o "static/schema.json"; then
+    echo "Schema saved to static/schema.json"
 else
-    echo "Warning: could not download schema from $SCHEMA_URL. Skipping."
+    echo "Warning: could not download latest.json. Skipping."
 fi
+
+# versioned schemas → /schema/<version>/schema.json
+for VERSION in "${SCHEMA_VERSIONS[@]}"; do
+    mkdir -p "static/schema/$VERSION"
+    if curl -sf "$SCHEMA_BASE_URL/$VERSION/schema.json" -o "static/schema/$VERSION/schema.json"; then
+        echo "Schema saved to static/schema/$VERSION/schema.json"
+    else
+        echo "Warning: could not download $VERSION/schema.json. Skipping."
+    fi
+done
 
 # --- JSON-LD Context ---
 
-CONTEXT_URL="https://raw.githubusercontent.com/OpenSyndrome/schema/refs/heads/main/schemas/context.jsonld"
-CONTEXT_OUT="static/context.jsonld"
-
 echo "Downloading JSON-LD context..."
-if curl -sf "$CONTEXT_URL" -o "$CONTEXT_OUT"; then
-    echo "Context saved to $CONTEXT_OUT"
+
+# latest context → /context.jsonld
+if curl -sf "$SCHEMA_BASE_URL/context.jsonld" -o "static/context.jsonld"; then
+    echo "Context saved to static/context.jsonld"
 else
-    echo "Warning: could not download context.jsonld from $CONTEXT_URL. Skipping."
+    echo "Warning: could not download context.jsonld. Skipping."
 fi
+
+# versioned contexts → /schema/<version>/context.jsonld
+for VERSION in "${SCHEMA_VERSIONS[@]}"; do
+    mkdir -p "static/schema/$VERSION"
+    if curl -sf "$SCHEMA_BASE_URL/$VERSION/context.jsonld" -o "static/schema/$VERSION/context.jsonld"; then
+        echo "Context saved to static/schema/$VERSION/context.jsonld"
+    else
+        echo "Warning: could not download $VERSION/context.jsonld. Skipping."
+    fi
+done
