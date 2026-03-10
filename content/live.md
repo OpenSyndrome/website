@@ -8,7 +8,7 @@ layout: "simple"
 
 Explore the Open Syndrome definitions interactively in the live data browser.
 
-<a href="https://data-browser.fly.dev/" target="_blank" rel="noopener" style="display:inline-block; margin-bottom: 1rem; padding: 0.5rem 1.25rem; background:#19BF7A; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">Open Data Browser →</a>
+<a href="https://huggingface.co/spaces/opensyndrome/data-browser" target="_blank" rel="noopener" style="display:inline-block; margin-bottom: 1rem; padding: 0.5rem 1.25rem; background:#19BF7A; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">Open Data Browser →</a>
 
 ---
 
