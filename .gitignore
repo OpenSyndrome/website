@@ -16,6 +16,7 @@ data/
 !static/data/
 !static/schema.json
 !static/context.jsonld
+_vendor/
 
 # charts related files
 .venv/
