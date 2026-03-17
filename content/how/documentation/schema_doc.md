@@ -55,11 +55,14 @@ ToC: false
 | **Type**     | `enum (of string)` |
 | **Required** | Yes                |
 
-**Description:** A broad definition aims to capture most or all true cases, while a specific definition provides a more accurate description but risks missing some true cases.
+**Description:** Case definition categories according to Bassil, K. (2008). Case definition. In Encyclopedia of epidemiology (Vol. 2, pp. 133-134). SAGE Publications, Inc., https://doi.org/10.4135/9781412953948
 
 Must be one of:
-* "specific"
-* "broad"
+* "confirmed"
+* "probable"
+* "suspected"
+
+Default: "suspected"
 
 ## Scope
 
@@ -67,14 +70,12 @@ Must be one of:
 | ------------ | ------------------ |
 | **Type**     | `enum (of string)` |
 | **Required** | Yes                |
-| **Default**  | `"suspected"`      |
 
-**Description:** Case definition categories according to Bassil, K. (2008). Case definition. In Encyclopedia of epidemiology (Vol. 2, pp. 133-134). SAGE Publications, Inc., https://doi.org/10.4135/9781412953948
+**Description:** A broad definition aims to capture most or all true cases, while a specific definition provides a more accurate description but risks missing some true cases.
 
 Must be one of:
-* "confirmed"
-* "probable"
-* "suspected"
+* "specific"
+* "broad"
 
 ## Version
 
@@ -300,7 +301,7 @@ Must be one of:
 | Property                                                                              | Pattern | Type             | Deprecated | Definition | Title/Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | + [type](#inclusion_criteria_items_type )                                             | No      | enum (of string) | No         | -          | Type of criterion.<br /><br />- criteria: Group of criteria or conditions.<br />- syndrome: Syndrome (defined by another definition, but used here as a criterion).<br />- symptom: just a symptom.<br />- diagnosis: The diagnosed disease, which may or may not be followed by a code, e.g. ICD.<br />- diagnostic_test: Tests or medical examinations to confirm a diagnosis, e.g. gluplasma glucose.<br />- professional_judgment: Professional assessment.<br />- epidemiological_history: Travel history or contact with someone with an epidemiological link.<br />- demographic_criteria: Factors such as age or sex. |
-| - [logical_operator](#inclusion_criteria_items_logical_operator )                     | No      | enum (of string) | No         | -          | Keywords that represent a logical operation on criteria.<br /><br />AND: All conditions in this group must be satisfied (true).<br />OR: At least one condition in this group must be satisfied.<br />AND_NOT: All conditions in this group must not be satisfied (must be false).<br />AT_LEAST: Used with the number specified in \`logical_operator_arguments\`. At least that many conditions must be true.                                                                                                                                                                                                               |
+| - [logical_operator](#inclusion_criteria_items_logical_operator )                     | No      | enum (of string) | No         | -          | Keywords that represent a logical operation on criteria.<br /><br />AND: All conditions in this group must be satisfied (true).<br />OR: At least one condition in this group must be satisfied.<br />AT_LEAST: Used with the number specified in \`logical_operator_arguments\`. At least that many conditions must be true.                                                                                                                                                                                                               |
 | - [logical_operator_arguments](#inclusion_criteria_items_logical_operator_arguments ) | No      | array of integer | No         | -          | Used with \`logical_operator = AT_LEAST\`. At least that many conditions must be true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | - [name](#inclusion_criteria_items_name )                                             | No      | string           | No         | -          | Criterion label.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | - [attribute](#inclusion_criteria_items_attribute )                                   | No      | string           | No         | -          | The referred attribute.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -378,13 +379,11 @@ Must be one of:
 
 AND: All conditions in this group must be satisfied (true).
 OR: At least one condition in this group must be satisfied.
-AND_NOT: All conditions in this group must not be satisfied (must be false).
 AT_LEAST: Used with the number specified in `logical_operator_arguments`. At least that many conditions must be true.
 
 Must be one of:
 * "AND"
 * "OR"
-* "AND_NOT"
 * "AT_LEAST"
 
 #### Logical operator arguments

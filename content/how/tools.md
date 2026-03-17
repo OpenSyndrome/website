@@ -7,12 +7,23 @@ The Open Syndrome Definition Initiative provides a set of simple tools to make s
 accessible in different formats. Whether you're a healthcare practitioner drafting definitions in
 plain text or a developer integrating them into your systems, we've got you covered.
 
-Our tooling was built on top of the `osi-python` package that works as a CLI
+Our tooling was built on top of the `open-syndrome-python` package that works as a CLI
 and a library. To install it, run:
 
 ```bash
 pip install opensyndrome
 ```
+
+## Getting started
+
+Before using the CLI, download the schema and definitions locally:
+
+```bash
+opensyndrome download schema
+opensyndrome download definitions
+```
+
+This saves them to `~/.open_syndrome/` for offline use.
 
 ## OSI CLI
 
@@ -24,15 +35,20 @@ Let's explore its main features!
 
 You can pass a case definition to this option and get a formatted JSON out of it.
 This can be done in two ways: 1) calling `opensyndrome convert` will open an interactive prompt where you can
-paste the text, or 2) you can pass the text after the `--human-readable-definition` or `-hr` option.
+paste the text, or 2) you can pass the text inline after the `-hr` / `--human-readable-definition` option,
+or from a file using the `-hf` option.
 
 ```bash
-opensyndrome convert --human-readable-definition "Fever, cough, and difficulty breathing for 3 days"
+opensyndrome convert -hr "Fever, cough, and difficulty breathing for 3 days"
+opensyndrome convert -hf definition.txt
 ````
 
-In case you want to try other Large Language Models (LLMs), you can use the `--model` option to specify it.
-If you want to have it in other spoken languages, you can use the `--language` option to specify it.
+In case you want to try other Large Language Models (LLMs), you can use the `--provider` option to select
+a provider (e.g. `ollama`, `openai`, `anthropic`, `mistral`, `deepseek`, `gemini`) and `--model` to specify
+the model name. If you want to have it in other spoken languages, you can use the `--language` option.
 The same applies to the **humanize** command.
+
+You can also pass `--validate` to automatically run validation on the output after conversion.
 
 {{< lead >}}
 The JSON output is a starting point to be refined further.
@@ -46,8 +62,6 @@ Run `opensyndrome convert --help` to see all options.
 
 To validate your JSON file against the Open Syndrome Definition schema, you can use the `validate` command.
 It will show you what is missing or if the JSON is valid.
-
-If you have the schema in another location, use `--schema-file` to change the default location.
 
 ```bash
 opensyndrome validate dengue_brazil.json
