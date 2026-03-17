@@ -11,23 +11,23 @@ Our tooling was built on top of the `osi-python` package that works as a CLI
 and a library. To install it, run:
 
 ```bash
-pip install osi
+pip install opensyndrome
 ```
 
 ## OSI CLI
 
-The `osi` CLI is a command-line tool that allows you to convert case and syndrome definitions in
+The `opensyndrome` CLI is a command-line tool that allows you to convert case and syndrome definitions in
 narrative format to JSON and back. It also provides a simple validation tool to check the syntax.
 Let's explore its main features!
 
 ### From human to machine-readable form 🤖
 
 You can pass a case definition to this option and get a formatted JSON out of it.
-This can be done in two ways: 1) calling `osi convert` will open an interactive prompt where you can
+This can be done in two ways: 1) calling `opensyndrome convert` will open an interactive prompt where you can
 paste the text, or 2) you can pass the text after the `--human-readable-definition` or `-hr` option.
 
 ```bash
-osi convert --human-readable-definition "Fever, cough, and difficulty breathing for 3 days"
+opensyndrome convert --human-readable-definition "Fever, cough, and difficulty breathing for 3 days"
 ````
 
 In case you want to try other Large Language Models (LLMs), you can use the `--model` option to specify it.
@@ -40,7 +40,7 @@ The JSON output is a starting point to be refined further.
 
 You can pass the option `--edit` to open an interactive editor to refine it.
 
-Run `osi convert --help` to see all options.
+Run `opensyndrome convert --help` to see all options.
 
 ### Validate your JSON ✅
 
@@ -50,7 +50,7 @@ It will show you what is missing or if the JSON is valid.
 If you have the schema in another location, use `--schema-file` to change the default location.
 
 ```bash
-osi validate dengue_brazil.json
+opensyndrome validate dengue_brazil.json
 ```
 
 ### From machine to human-readable form 📖
@@ -60,10 +60,10 @@ This command will take the JSON file and output a narrative description of the s
 You can also choose the model and language for the output.
 
 ```bash
-osi humanize measles_who.json
+opensyndrome humanize measles_who.json
 ```
 
-Run `osi humanize --help` to see all options.
+Run `opensyndrome humanize --help` to see all options.
 
 ## Other JSON tools
 
