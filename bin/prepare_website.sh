@@ -75,10 +75,10 @@ done
 echo "Downloading JSON-LD context..."
 
 # latest context → /context.jsonld
-if curl -sf "$SCHEMA_BASE_URL/context.jsonld" -o "static/context.jsonld"; then
+if curl -sf "$SCHEMA_BASE_URL/latest_context.jsonld" -o "static/context.jsonld"; then
     echo "Context saved to static/context.jsonld"
 else
-    echo "Warning: could not download context.jsonld. Skipping."
+    echo "Warning: could not download latest_context.jsonld. Skipping."
 fi
 
 # versioned contexts → /schema/<version>/context.jsonld
@@ -88,5 +88,26 @@ for VERSION in "${SCHEMA_VERSIONS[@]}"; do
         echo "Context saved to static/schema/$VERSION/context.jsonld"
     else
         echo "Warning: could not download $VERSION/context.jsonld. Skipping."
+    fi
+done
+
+# --- Ontology ---
+
+echo "Downloading ontology..."
+
+# latest ontology → /ontology.ttl
+if curl -sf "$SCHEMA_BASE_URL/latest_ontology.ttl" -o "static/ontology.ttl"; then
+    echo "Ontology saved to static/ontology.ttl"
+else
+    echo "Warning: could not download latest_ontology.ttl. Skipping."
+fi
+
+# versioned ontologies → /schema/<version>/ontology.ttl
+for VERSION in "${SCHEMA_VERSIONS[@]}"; do
+    mkdir -p "static/schema/$VERSION"
+    if curl -sf "$SCHEMA_BASE_URL/$VERSION/ontology.ttl" -o "static/schema/$VERSION/ontology.ttl"; then
+        echo "Ontology saved to static/schema/$VERSION/ontology.ttl"
+    else
+        echo "Warning: could not download $VERSION/ontology.ttl. Skipping."
     fi
 done
