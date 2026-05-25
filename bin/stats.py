@@ -134,7 +134,7 @@ def generate_graph_of_criteria(definitions):
 
 
 if __name__ == "__main__":
-    jsons_dir = Path("data/definitions.json")
+    jsons_dir = Path("data/definitions_v1.json")
     definitions = json.loads(jsons_dir.read_text())
 
     all_instructions_counts = []
@@ -145,14 +145,12 @@ if __name__ == "__main__":
         _all_types = process_criteria(data, "exclusion_criteria", extract_types)
         all_types.extend(_all_types)
 
-    # type_counts = Counter(all_types)
-    # print("Type Counts (chart format)")
-    # print(list(type_counts.keys()))
-    # print(list(type_counts.values()))
-    # print("Language:")
-    # print(count_attribute(definitions, "language"))
-    # print("Location:")
-    # print(count_attribute(definitions, "location"))
+    type_counts = Counter(all_types)
+    total = sum(type_counts.values())
+    print(f"Type counts (N={total}):")
+    for type_name, count in type_counts.most_common():
+        percentage = round(count / total * 100)
+        print(f"  {type_name}: ({count}/{total}, {percentage}%)")
 
     location_counts = count_attribute(definitions, "location")
     generate_choropleth(location_counts)
