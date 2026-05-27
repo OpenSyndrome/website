@@ -31,7 +31,7 @@ There are two sources, and they serve different needs.
 
 ### 1. Paper snapshot on Hugging Face (frozen bundle)
 
-The exact bundle used in the [Open Syndrome paper](https://arxiv.org/abs/2509.25434) is published on Hugging Face with a citable DOI:
+The exact bundle used in the Open Syndrome paper — *The Open Syndrome Definition as a Machine-Readable Standard for Public Health*, forthcoming in the [Journal of Medical Internet Research](https://dx.doi.org/10.2196/86249) ([preprint on arXiv](https://arxiv.org/abs/2509.25434)) — is published on Hugging Face with a citable DOI:
 
 * **Repository:** [`opensyndrome/case-definitions`](https://huggingface.co/datasets/opensyndrome/case-definitions)
 * **Size:** ~62 MB · **License:** MIT · **DOI:** [10.57967/hf/6635](https://doi.org/10.57967/hf/6635)

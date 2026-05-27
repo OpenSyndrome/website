@@ -5,11 +5,12 @@ date: 2025-05-05
 ---
 
 When using Open Syndrome definitions, datasets, or tools in your work, please cite them appropriately.  
-In all cases, we recommend **also citing the Open Syndrome paper**:
+In all cases, we recommend **also citing the Open Syndrome paper** (forthcoming in the *Journal of Medical Internet Research*):
 
 ```
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2025).
-The Open Syndrome Definition. arXiv:2509.25434. Available from: https://arxiv.org/abs/2509.25434
+Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
+Preprint: https://arxiv.org/abs/2509.25434
 ```
 
 ---
@@ -21,8 +22,9 @@ For case definitions, cite the original source, the Open Syndrome paper, and the
 ```
 [Original Author(s)]. [Title of Definition]. [Year]. [Original Source].
 Also cite:
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2025).
-The Open Syndrome Definition. arXiv:2509.25434. Available from: https://arxiv.org/abs/2509.25434
+Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
+Preprint: https://arxiv.org/abs/2509.25434
 Available from (Open Syndrome format): https://opensyndrome.org/definitions/diarrhea-definition/
 Repository: https://github.com/OpenSyndrome/definitions
 ```
@@ -34,8 +36,9 @@ Repository: https://github.com/OpenSyndrome/definitions
 When using the Open Syndrome dataset, cite the paper and dataset link:
 
 ```
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2025).
-The Open Syndrome Definition. arXiv:2509.25434. Available from: https://arxiv.org/abs/2509.25434
+Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
+Preprint: https://arxiv.org/abs/2509.25434
 Dataset available from: https://huggingface.co/datasets/opensyndrome/case-definitions
 ```
 
@@ -46,8 +49,9 @@ Dataset available from: https://huggingface.co/datasets/opensyndrome/case-defini
 When using Open Syndrome tools or repositories, cite the paper and the GitHub organization:
 
 ```
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2025).
-The Open Syndrome Definition. arXiv:2509.25434. Available from: https://arxiv.org/abs/2509.25434
+Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
+Preprint: https://arxiv.org/abs/2509.25434
 Tools available from: https://github.com/OpenSyndrome/
 ```
 
@@ -55,7 +59,20 @@ Tools available from: https://github.com/OpenSyndrome/
 
 ## BibTeX
 
-If you prefer BibTeX for the paper:
+If you prefer BibTeX, the journal version (forthcoming) is the preferred entry:
+
+```
+@article{ferreira2026opensyndromejmir,
+      title={The Open Syndrome Definition as a Machine-Readable Standard for Public Health},
+      author={Ferreira, Ana Paula Gomes and Anžel, Aleksandar and Marcilio de Souza, Izabel Oliva and Hughes, Helen and Elliot, Alex J and Kong, Jude Dzevela and Schranz, Madlen and Ullrich, Alexander and Hattab, Georges},
+      journal={Journal of Medical Internet Research},
+      doi={10.2196/86249},
+      url={https://dx.doi.org/10.2196/86249},
+      note={Forthcoming}
+}
+```
+
+The arXiv preprint is also available:
 
 ```
 @misc{ferreira2025opensyndromedefinition,
