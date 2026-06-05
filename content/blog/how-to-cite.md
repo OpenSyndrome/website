@@ -90,4 +90,4 @@ The arXiv preprint is also available:
 
 ## Questions?
 
-If you have any questions about citing Open Syndrome, please [contact us](mailto:gomes-ferreiraa@rki.de)
+If you have any questions about citing Open Syndrome, please [contact us](mailto:opensyndrome@anapaulagomes.me)

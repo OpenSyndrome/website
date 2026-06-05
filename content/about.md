@@ -24,7 +24,7 @@ We work closely with Public Health Organizations, Healthcare Institutions, Softw
 See [how to get involved](/how/) and check our [tools](/how/tools) out.
 
 {{< alert "email" >}}
-Want to talk to us? Send an email to [gomes-ferreiraa@rki.de](mailto:gomes-ferreiraa@rki.de)
+Want to talk to us? Send an email to [opensyndrome@anapaulagomes.me](mailto:opensyndrome@anapaulagomes.me)
 {{< /alert >}}
 
 ## Summary statistics

@@ -117,7 +117,7 @@ Open an issue or pull request on the [GitHub repository](https://github.com/Open
 and please cite us as described in our [citation guide](https://opensyndrome.org/blog/how-to-cite/).
 
 {{< alert "email" >}}
-Want to talk to us? Send an email to [gomes-ferreiraa@rki.de](mailto:gomes-ferreiraa@rki.de)
+Want to talk to us? Send an email to [opensyndrome@anapaulagomes.me](mailto:opensyndrome@anapaulagomes.me)
 {{< /alert >}}
 
 Together, we're building a more standardized and efficient global disease surveillance system.
