@@ -12,7 +12,8 @@ hugo.linux
 # Temporary lock file while building
 /.hugo_build.lock
 
-data/
+data/*
+!data/charts/
 !static/data/
 !static/schema.json
 !static/context.jsonld
@@ -21,3 +22,5 @@ _vendor/
 # charts related files
 .venv/
 *.pdf
+
+tmp/

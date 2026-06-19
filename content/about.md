@@ -35,15 +35,10 @@ _Updated at 30 of May 2025_
 
 ![World Map of Definitions](/images/world_map.svg)
 
+{{< alert >}}
+The map is built from each definition's `location`, matched to a country with [pycountry](https://github.com/pycountry/pycountry). Region-level locations (e.g. Africa, Global) are not plotted.
+{{< /alert >}}
+
 ### Criteria types
 
-{{< chart >}}
-type: 'bar',
-data: {
-  labels: ['criteria', 'symptom', 'diagnosis', 'diagnostic_test', 'demographic_criteria', 'professional_judgment', 'syndrome', 'epidemiological_history'],
-  datasets: [{
-    label: '# inclusion and exclusion criteria types',
-    data: [109, 214, 33, 10, 4, 17, 1, 14],
-  }]
-}
-{{< /chart >}}
+{{< chart-data name="criteria_types" >}}

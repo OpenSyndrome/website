@@ -1,0 +1,22 @@
+<div class="chart">
+  {{ $data := index site.Data.charts (.Get "name") }}
+  {{ $id := delimit (shuffle (seq 1 9)) "" }}
+  <canvas id="{{ $id }}"></canvas>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", (event) => {
+      const ctx = document.getElementById("{{ $id }}");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: {{ $data.labels | jsonify | safeJS }},
+          datasets: [{
+            label: {{ $data.label | jsonify | safeJS }},
+            data: {{ $data.data | jsonify | safeJS }},
+            borderColor: "#00C853",
+            backgroundColor: "#00C853",
+          }]
+        }
+      });
+    });
+  </script>
+</div>

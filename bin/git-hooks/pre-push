@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Regenerate the site statistics before pushing and refuse the push if the
+# committed, generated files are stale, so the deployed site always matches the
+# current dataset. Stats are computed locally (not in the Netlify build).
+set -uo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root" || exit 1
+
+if [ -x .venv/bin/python ]; then
+  PYTHON=.venv/bin/python
+else
+  PYTHON=python3
+fi
+
+# Deterministic, committed chart data served by the site. The world map SVG is
+# non-deterministic (plotly random ids), so it is left to `make stats`.
+artifacts=(data/charts)
+
+echo "pre-push: regenerating chart data..."
+if ! log="$("$PYTHON" bin/stats.py --charts-only 2>&1)"; then
+  echo "⚠ pre-push: could not regenerate stats; skipping the staleness check." >&2
+  echo "  Install dependencies with 'make install' to enable it." >&2
+  printf '%s\n' "$log" | sed 's/^/    /' >&2
+  exit 0
+fi
+
+if [ -n "$(git status --porcelain -- "${artifacts[@]}")" ]; then
+  {
+    echo
+    echo "✖ pre-push: chart data is out of date or uncommitted."
+    echo "  Regenerated files differ from HEAD. Review and commit them:"
+    echo
+    git -c color.ui=never status --short -- "${artifacts[@]}" | sed 's/^/    /'
+    echo
+    echo "  Then push again. (To skip once: git push --no-verify)"
+  } >&2
+  exit 1
+fi
+
+echo "pre-push: chart data up to date."

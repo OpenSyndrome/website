@@ -1,0 +1,23 @@
+{
+  "label": "# inclusion and exclusion criteria types",
+  "labels": [
+    "symptom",
+    "criterion",
+    "diagnosis",
+    "professional_judgment",
+    "epidemiological_history",
+    "diagnostic_test",
+    "demographic_criteria",
+    "syndrome"
+  ],
+  "data": [
+    217,
+    106,
+    34,
+    18,
+    14,
+    12,
+    5,
+    1
+  ]
+}
