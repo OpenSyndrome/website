@@ -36,4 +36,4 @@ data: {
 Whether you're a health worker defining new cases or a developer building surveillance tools, Open Syndrome
 provides the standards and tools you need for effective machine-readable representation.
 
-Explore the graph of syndromes and its criteria [here](/graph).
+Explore the graph of syndromes and their criteria [here](/live/#definitions-graph).
