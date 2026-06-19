@@ -2,15 +2,24 @@
 title: "How to Cite Open Syndrome"
 description: "Guidelines for citing Open Syndrome definitions, datasets, and tools"
 date: 2025-05-05
+lastmod: 2026-06-19
 ---
 
 When using Open Syndrome definitions, datasets, or tools in your work, please cite them appropriately.  
-In all cases, we recommend **also citing the Open Syndrome paper** (forthcoming in the *Journal of Medical Internet Research*):
+In all cases, we recommend **also citing the Open Syndrome paper**, published in the *Journal of Medical Internet Research*:
 
 ```
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
-The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
-Preprint: https://arxiv.org/abs/2509.25434
+Gomes Ferreira, A. P., Anžel, A., Marcilio, I., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2026).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health: Design and Implementation Study.
+Journal of Medical Internet Research, 28, e86249. https://doi.org/10.2196/86249
+```
+
+JMIR's preferred citation format:
+
+```
+Gomes Ferreira AP, Anžel A, Marcilio I, Hughes H, Elliot AJ, Kong JD, Schranz M, Ullrich A, Hattab G.
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health: Design and Implementation Study.
+J Med Internet Res 2026;28:e86249. URL: https://www.jmir.org/2026/1/e86249. doi: 10.2196/86249
 ```
 
 ---
@@ -22,9 +31,9 @@ For case definitions, cite the original source, the Open Syndrome paper, and the
 ```
 [Original Author(s)]. [Title of Definition]. [Year]. [Original Source].
 Also cite:
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
-The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
-Preprint: https://arxiv.org/abs/2509.25434
+Gomes Ferreira, A. P., Anžel, A., Marcilio, I., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2026).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health: Design and Implementation Study.
+Journal of Medical Internet Research, 28, e86249. https://doi.org/10.2196/86249
 Available from (Open Syndrome format): https://opensyndrome.org/definitions/diarrhea-definition/
 Repository: https://github.com/OpenSyndrome/definitions
 ```
@@ -36,9 +45,9 @@ Repository: https://github.com/OpenSyndrome/definitions
 When using the Open Syndrome dataset, cite the paper and dataset link:
 
 ```
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
-The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
-Preprint: https://arxiv.org/abs/2509.25434
+Gomes Ferreira, A. P., Anžel, A., Marcilio, I., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2026).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health: Design and Implementation Study.
+Journal of Medical Internet Research, 28, e86249. https://doi.org/10.2196/86249
 Dataset available from: https://huggingface.co/datasets/opensyndrome/case-definitions
 ```
 
@@ -49,9 +58,9 @@ Dataset available from: https://huggingface.co/datasets/opensyndrome/case-defini
 When using Open Syndrome tools or repositories, cite the paper and the GitHub organization:
 
 ```
-Ferreira, A. P. G., Anžel, A., Marcilio de Souza, I. O., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (forthcoming).
-The Open Syndrome Definition as a Machine-Readable Standard for Public Health. Journal of Medical Internet Research. https://dx.doi.org/10.2196/86249
-Preprint: https://arxiv.org/abs/2509.25434
+Gomes Ferreira, A. P., Anžel, A., Marcilio, I., Hughes, H., Elliot, A. J., Kong, J. D., Schranz, M., Ullrich, A., & Hattab, G. (2026).
+The Open Syndrome Definition as a Machine-Readable Standard for Public Health: Design and Implementation Study.
+Journal of Medical Internet Research, 28, e86249. https://doi.org/10.2196/86249
 Tools available from: https://github.com/OpenSyndrome/
 ```
 
@@ -59,16 +68,18 @@ Tools available from: https://github.com/OpenSyndrome/
 
 ## BibTeX
 
-If you prefer BibTeX, the journal version (forthcoming) is the preferred entry:
+If you prefer BibTeX, the journal version is the preferred entry:
 
 ```
-@article{ferreira2026opensyndromejmir,
-      title={The Open Syndrome Definition as a Machine-Readable Standard for Public Health},
-      author={Ferreira, Ana Paula Gomes and Anžel, Aleksandar and Marcilio de Souza, Izabel Oliva and Hughes, Helen and Elliot, Alex J and Kong, Jude Dzevela and Schranz, Madlen and Ullrich, Alexander and Hattab, Georges},
+@article{gomesferreira2026opensyndromejmir,
+      title={The Open Syndrome Definition as a Machine-Readable Standard for Public Health: Design and Implementation Study},
+      author={Gomes Ferreira, Ana Paula and Anžel, Aleksandar and Marcilio, Izabel and Hughes, Helen and Elliot, Alex J and Kong, Jude Dzevela and Schranz, Madlen and Ullrich, Alexander and Hattab, Georges},
       journal={Journal of Medical Internet Research},
+      year={2026},
+      volume={28},
+      pages={e86249},
       doi={10.2196/86249},
-      url={https://dx.doi.org/10.2196/86249},
-      note={Forthcoming}
+      url={https://www.jmir.org/2026/1/e86249}
 }
 ```
 
