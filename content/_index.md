@@ -20,6 +20,10 @@ or visit our [blog]({{< ref "blog" >}}) to stay updated on the latest case defin
 Whether you're a health worker defining new cases or a developer building surveillance tools, Open Syndrome
 provides the standards and tools you need for effective machine-readable representation.
 
+{{< alert "google-scholar" >}}
+Our paper is published in JMIR: [The Open Syndrome Definition as a Machine-Readable Standard for Public Health](https://www.jmir.org/2026/1/e86249).
+{{< /alert >}}
+
 [//]: # (![Treemap of definitions by disease]&#40;/images/threats_treemap.svg&#41;)
 {{< figure src="/images/threats_treemap.svg" alt="Treemap of definitions by disease" caption="Treemap of definitions by disease" >}}
 

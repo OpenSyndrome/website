@@ -3,6 +3,10 @@ title: About the Open Syndrome Initiative
 showDate: false
 ---
 
+{{< alert "google-scholar" >}}
+Our paper is published in JMIR: [The Open Syndrome Definition as a Machine-Readable Standard for Public Health](https://www.jmir.org/2026/1/e86249).
+{{< /alert >}}
+
 ## Our Mission
 
 Open Syndrome is a collaborative initiative to standardize and modernize disease surveillance through machine-readable case definitions.
