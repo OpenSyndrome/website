@@ -8,7 +8,7 @@ layout: "simple"
 
 Explore the Open Syndrome definitions interactively in the live data browser.
 
-<a href="https://huggingface.co/spaces/opensyndrome/data-browser" target="_blank" rel="noopener" style="display:inline-block; margin-bottom: 1rem; padding: 0.5rem 1.25rem; background:#19BF7A; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">Open Data Browser →</a>
+<a href="https://huggingface.co/spaces/opensyndrome/data-browser" target="_blank" rel="noopener" style="display:inline-block; margin-bottom: 1rem; padding: 0.5rem 1.25rem; background:#008850; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;">Open Data Browser →</a>
 
 ---
 
@@ -28,12 +28,12 @@ This interactive visualization shows the relationships between different criteri
 
 <span style="color: #000000">●</span> Definition
 <span style="color: #1f77b4">●</span> Symptom
-<span style="color: #ff7f0e">●</span> Diagnosis
-<span style="color: #2ca02c">●</span> Professional Judgment
+<span style="color: #bf5900">●</span> Diagnosis
+<span style="color: #158915">●</span> Professional Judgment
 <span style="color: #d62728">●</span> Demographic Criteria
-<span style="color: #9467bd">●</span> Diagnostic Test
+<span style="color: #8f62b8">●</span> Diagnostic Test
 <span style="color: #8c564b">●</span> Syndrome
-<span style="color: #e377c2">●</span> Epidemiological History
+<span style="color: #ad3a8c">●</span> Epidemiological History
 
 {{< badge >}}
 Tips

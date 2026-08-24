@@ -22,6 +22,7 @@
 
 [[main]]
   name = "GitHub"
+  title = "GitHub"
   url = "https://github.com/OpenSyndrome/"
   weight = 30
   [main.params]
@@ -46,19 +47,29 @@
 [[footer]]
   name = "Tags"
   pageRef = "tags"
+  weight = 3
 
 [[footer]]
   name = "How to cite"
   pageRef = "blog/how-to-cite"
+  weight = 2
 
 [[footer]]
   name = "Blog"
   pageRef = "blog"
+  weight = 1
 
 [[footer]]
   name = "GitHub"
   url = "https://github.com/OpenSyndrome/"
+  weight = 4
 
 [[footer]]
   name = "Impressum"
   pageRef = "impressum"
+  weight = 5
+
+[[footer]]
+  name = "Accessibility"
+  pageRef = "accessibility"
+  weight = 6

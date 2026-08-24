@@ -47,12 +47,12 @@ function createForceGraph(data) {
     const nodeColors = {
         "definition": "#000000",
         "symptom": "#1f77b4",
-        "diagnosis": "#ff7f0e",
-        "professional_judgment": "#2ca02c",
+        "diagnosis": "#bf5900",
+        "professional_judgment": "#158915",
         "demographic_criteria": "#d62728",
-        "diagnostic_test": "#9467bd",
+        "diagnostic_test": "#8f62b8",
         "syndrome": "#8c564b",
-        "epidemiological_history": "#e377c2"
+        "epidemiological_history": "#ad3a8c"
     };
 
     // Create the force simulation
